@@ -1,10 +1,8 @@
 /*
-macroScript LODTool
-category:"LOD Macro Test"
-buttontext:"LOD Tool"
-toolTip:"LOD Tool"
-
-(
+Title: MaxLOD Script
+Author: Hyundo Yoo
+Email: guseh7@gmail.com
+2021.10.12
 */
 
 	-- UI Part
@@ -26,6 +24,7 @@ toolTip:"LOD Tool"
 		on bt_group_make pressed  do
 		(
 			tempSelection = getCurrentSelection()
+			if tempSelection.count != 0 do (
 			for i = 1 to tempSelection.count do
 			(
 				s = tempSelection[i] as string
@@ -36,6 +35,7 @@ toolTip:"LOD Tool"
 			)
 				thegroup = group selection name: ("LOD_Group")
 				select thegroup
+			)
 		)
 		
 		on bt_group_break pressed  do
@@ -83,5 +83,3 @@ toolTip:"LOD Tool"
 		
 	)	
 createDialog LODTool style:#(#style_toolwindow, #style_sysmenu)
-	
---)
