@@ -51,8 +51,11 @@ rollout LODTool " LOD Tool" width:146
 		
 	on bt_group_break pressed  do
 	(
-		tempSelection = getCurrentSelection()
-		ungroup tempSelection[1]
+		tempSelection = getCurrentSelection()		
+		for obj = tempSelection do
+		(
+			if isGroupHead obj then ungroup obj
+		)
 	)
 
 	on bt_lod_make pressed  do
