@@ -94,4 +94,5 @@ toolTip:"LOD Tool"
 			)
 		)
 	)
+createDialog LODTool style:#(#style_toolwindow, #style_sysmenu)
 )
