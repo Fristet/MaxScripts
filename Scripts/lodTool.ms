@@ -43,6 +43,10 @@ rollout LODTool " LOD Tool" width:146
 			(
 				lod0name = tempSelection[i].name
 			)
+			else if (findString s "LOD") == undefined then
+			(
+				lod0name = tempSelection[i].name
+			)
 		)
 			tempGroup = group selection name: (lod0name)
 			select tempGroup
